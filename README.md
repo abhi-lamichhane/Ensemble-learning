@@ -1,88 +1,76 @@
-**Heart Failure Prediction Model
-This project aims to build and evaluate machine learning models to predict the likelihood of heart failure events based on a patient's clinical records.
+Project Name: Heart Failure Prediction
+1. Introduction
+Objective: Build and evaluate machine learning models to predict heart failure events from clinical data.
 
-**Problem Statement
-The goal is to use a dataset of clinical records to create and test machine learning models for classifying heart failure risk. The project involves data preprocessing, exploratory data analysis (EDA), and model training using several algorithms.
+**Workflow: Data preprocessing, EDA, and model training.
 
-**Dataset
-The model is trained on the heart_failure_clinical_records.csv dataset, which contains clinical parameters for patients.
+2. Dataset Details
+Source File: heart_failure_clinical_records.csv
 
-**Columns
-The dataset includes the following features:
+**Key Features:
 
-age: Age of the patient (years)
+--age (years)
 
-anaemia: Decrease of red blood cells or hemoglobin (boolean)
+--anaemia (boolean)
 
-creatinine_phosphokinase: Level of the CPK enzyme in the blood (mcg/L)
+--creatinine_phosphokinase (mcg/L)
 
-diabetes: If the patient has diabetes (boolean)
+--diabetes (boolean)
 
-ejection_fraction: Percentage of blood leaving the heart at each contraction (percentage)
+--ejection_fraction (%)
 
-high_blood_pressure: If the patient has hypertension (boolean)
+--high_blood_pressure (boolean)
 
-platelets: Platelets in the blood (kiloplatelets/mL)
+--platelets (kiloplatelets/mL)
 
-serum_creatinine: Level of serum creatinine in the blood (mg/dL)
+--serum_creatinine (mg/dL)
 
-serum_sodium: Level of serum sodium in the blood (mEq/L)
+--serum_sodium (mEq/L)
 
-sex: Sex of the patient (binary, 1 for male, 0 for female)
+--sex (binary, male/female)
 
-smoking: If the patient smokes or not (boolean)
+--smoking (boolean)
 
-time: Follow-up period (days)
+--time (days)
 
-death_event: The target variable, indicating if the patient died during the follow-up period (boolean)
+---------Target Variable: death_event (boolean)
 
-**Methodology
-The project follows a standard machine learning workflow, including the following steps:
+3. Methodology
+Step 1: Data Preprocessing & EDA
 
-1. Data Preprocessing and EDA
+- Load data into pandas DataFrame.
 
-   
-Importing the data from heart_failure_clinical_records.csv into a pandas DataFrame.
+- Check for missing values.
 
-Displaying the dimensions (rows and columns) of the dataset.
+- Visualize data distributions (histograms, bar plots).
 
-Checking for and handling any missing values.
+Step 2: Model Training & Evaluation
 
-Performing statistical analysis and visualization, such as histograms for continuous features and bar plots for binary features, to understand data distribution.
+-Models Tested:
 
+   Gaussian Naive Bayes (GaussianNB)
 
-2. Model Training and Evaluation
+   Support Vector Machine (SVM)
 
-   
-The notebook trains and evaluates the following machine learning models:
+   XGBoost (XGBoost)
 
-Gaussian Naive Bayes (GaussianNB)
+-Evaluation Metrics:
 
-Support Vector Machine (SVM)
+   classification_report
 
-XGBoost (XGBoost)
+   confusion_matrix
 
-Model performance is analyzed using metrics like classification_report, confusion_matrix, and ROC curves to inform cost-benefit decisions.
+   ROC curves
 
-Required Libraries
-This project requires the following Python libraries:
+4. Technical Requirements
+Required Libraries:
 
-numpy
+-numpy
 
-pandas
+-pandas
 
-matplotlib.pyplot
+-matplotlib.pyplot
 
-sklearn.model_selection
+-sklearn (various modules)
 
-sklearn.preprocessing
-
-sklearn.naive_bayes
-
-sklearn.svm
-
-sklearn.tree
-
-xgboost
-
-sklearn.metrics
+-xgboost
